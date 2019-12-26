@@ -10,8 +10,8 @@
         </pre>
         </div>
         <script type="text/javascript" language="javascript">
-            fetch("./i-like-thomas.js").then(res => {
-                document.getElementById("jscode").innerText = res.text();
+            fetch("./i-like-thomas.js").then(res => { return res.text()}).then(text=>{
+                document.getElementById("jscode").innerText = text;
             });
         </script>
     </body>
