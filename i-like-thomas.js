@@ -5,7 +5,6 @@ let count = 1;
 
 const ID = setInterval(
     () => {
-        let count = 1;
         const articles =document.querySelectorAll("article");
         articles.forEach(
             
