@@ -11,9 +11,9 @@
         </div>
         <div id="import-point"></div>
         <script type="text/javascript" language="javascript">
-            let text = "";
-            fetch("./i-like-thomas.js").then(res => {text = res.text});
-            document.getElementById("jscode").innerText = text;
+            fetch("./i-like-thomas.js").then(res => {
+                document.getElementById("jscode").innerText = res.text
+            });
         </script>
     </body>
 </html>
