@@ -12,7 +12,7 @@
         <div id="import-point"></div>
         <script type="text/javascript" language="javascript">
             fetch("./i-like-thomas.js").then(res => {return res.text}).then( text =>{
-                document.getElementById("jscode").innerText = text
+                document.getElementById("jscode").innerText = text.toString()
             });
         </script>
     </body>
