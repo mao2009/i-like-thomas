@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <a class="bookmarklet" href=""></a>
+            <textarea id="test"></textarea>
+        </div>
+        <script type="text/javascript" language="javascript">
+            const fileName = "i-like-thomas.js"
+            
+            const httpObj = new XMLHttpRequest();
+            httpObj.open('GET',fileName,false);
+            httpObj.send("");
+            
+            const text = httpObj.responseText;
+            alert = text
+        </script>
+    </body>
+</html>
