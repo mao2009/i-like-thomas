@@ -34,4 +34,3 @@ const ID = setInterval(
         scrollBy(0,SCROOL_Y);
     }
 ,INTERVAL);
-
