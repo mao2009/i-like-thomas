@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    </head>
     <body>
         <div>
             <a class="bookmarklet" href=""></a>
-            <textarea id="test"></textarea>
+        <pre class="prettyprint"><code id="jscode" class="prettyprint lang-js" title="i-like-thomas.js"></code>
+        </pre>
         </div>
+        <scrpit type="text/javascript" language="javascript" id="i-like-thomas-js"></scrpit>
         <script type="text/javascript" language="javascript">
-            const fileName = "i-like-thomas.js"
-            
-            const httpObj = new XMLHttpRequest();
-            httpObj.open('GET',fileName,false);
-            httpObj.send("");
-            
-            const text = httpObj.responseText;
-            alert = text
+            const thomasJS = document.getElementById("i-like-thomas-js")
+            thomasJS.src = "i-like-thomas.js"
+            document.getElementById("jscode").innerText = thomasJS.innerText;
+            alert(thomasJS.innerText.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n",""));
         </script>
     </body>
 </html>
