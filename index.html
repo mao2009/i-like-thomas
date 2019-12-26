@@ -5,13 +5,15 @@
     </head>
     <body>
         <div>
-            <a class="bookmarklet" href=""></a>
+            <a class="bookmarklet" href="">i-like-thomas</a>
         <pre class="prettyprint"><code id="jscode" class="prettyprint lang-js" title="i-like-thomas.js"></code>
         </pre>
         </div>
         <script type="text/javascript" language="javascript">
             fetch("./i-like-thomas.js").then(res => { return res.text()}).then(text=>{
                 document.getElementById("jscode").innerText = text;
+                const bookmarklet = "javascript:" + ext.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n","");
+                document.getElementById("bookmarklet").href = bookmarklet;
             });
         </script>
     </body>
