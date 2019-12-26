@@ -23,7 +23,7 @@ const ID = setInterval(
                     count++;
                 }
 
-                if (count > 50){
+                if (count > MAX_COUNT){
                     clearInterval(ID);
                     return;
                 }
