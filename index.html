@@ -11,13 +11,9 @@
         </div>
         <div id="import-point"></div>
         <script type="text/javascript" language="javascript">
-            const script = document.createElement('script');
-            script.src = "i-like-thomas.js";
-            script.id = "thomas";
-            document.getElementById("import-point").appendChild(script);
-            const thomas = document.getElementById("thomas");
-            document.getElementById("jscode").innerText = thomas.innerText;
-            alert(thomas.innerText.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n",""));
+            let text = "";
+            fetch("./i-like-thomas.js").then(res => {text = res.text});
+            document.getElementById("jscode").innerText = text;
         </script>
     </body>
 </html>
