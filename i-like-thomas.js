@@ -11,7 +11,7 @@ const ID = setInterval(
             article => {
 
                 //プロモーションにはいいねしない
-                if (article.outerHTML.match(/プロモーション$/)){
+                if (article.outerHTML.match(/>プロモーション<\/span>/)){
                     return;
                 }
 
