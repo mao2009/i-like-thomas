@@ -13,7 +13,7 @@
         <script type="text/javascript" language="javascript">
             fetch("./i-like-thomas.js").then(res => { return res.text()}).then(text=>{
                 document.getElementById("jscode").innerText = text;
-                const bookmarklet = "javascript:" + text.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n","");
+                const bookmarklet = "javascript:(()=>{" + text.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n","") + "})()";
                 document.getElementById("bookmarklet").href = bookmarklet;
             });
         </script>
