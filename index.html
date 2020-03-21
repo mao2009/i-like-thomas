@@ -9,12 +9,21 @@
             <a id="bookmarklet">i-like-thomas</a>
         <pre class="prettyprint"><code id="jscode" class="prettyprint lang-js" title="i-like-thomas.js"></code>
         </pre>
+        <div>ブックマークレット:
+            <a id="retweet-bookmarklet">i-like-thomas-retweet</a>
+        <pre class="prettyprint"><code id="jscode-retweet" class="prettyprint lang-js" title="i-like-thomas.js"></code>
+        </pre>
         </div>
         <script type="text/javascript" language="javascript">
             fetch("./i-like-thomas.js").then(res => { return res.text()}).then(text=>{
                 document.getElementById("jscode").innerText = text;
                 const bookmarklet = "javascript:(()=>{" + text.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n","") + "})()";
                 document.getElementById("bookmarklet").href = bookmarklet;
+            });
+            fetch("./retweet.js").then(res => { return res.text()}).then(text=>{
+                document.getElementById("jscode-retweet").innerText = text;
+                const bookmarklet = "javascript:(()=>{" + text.replace(/\/\/.+?\n/g,"").replace(/\s+/g," ").replace("\n","") + "})()";
+                document.getElementById("retweet-bookmarklet").href = bookmarklet;
             });
         </script>
     </body>
