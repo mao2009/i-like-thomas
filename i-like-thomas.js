@@ -1,5 +1,5 @@
 const SCROOL_Y = 1000;
-const INTERVAL = 1000;
+const INTERVAL = 3000;
 const MAX_COUNT = 50;
 let count = 1;
 
